@@ -23,8 +23,6 @@ const UserCard = ({ name, phone, id, ip }) => {
     } catch (err) {}
   };
 
-  console.log(fetchedIp);
-
   return (
     <div className="card_item">
       <div className="card_inner">
@@ -44,16 +42,16 @@ const UserCard = ({ name, phone, id, ip }) => {
             <span>
               <HiOutlineLocationMarker /> {ip}
             </span>
-            {fetchedIp.map((user) => (
+            {fetchedIp?.map((user) => (
               <span>
-                {user.query === ip ? (
+                {user?.query === ip ? (
                   <>
                     <span>
-                      <TiLocationArrowOutline /> {user.country}
+                      <TiLocationArrowOutline /> {user?.country}
                     </span>
                     <br />
                     <span>
-                      <GiModernCity /> {user.city}
+                      <GiModernCity /> {user?.city}
                     </span>
                     <br />
                   </>
