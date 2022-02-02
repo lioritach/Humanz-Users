@@ -12,7 +12,7 @@ export const useFetchUsers = () => {
       try {
         const res = await axios.get("http://localhost:5000/api/users/");
         dispatch(setStatus("success")); //store status to redux
-        dispatch(getUsers(res.data)); //store data to redux
+        dispatch(getUsers(res?.data)); //store data to redux
       } catch (err) {}
     };
 

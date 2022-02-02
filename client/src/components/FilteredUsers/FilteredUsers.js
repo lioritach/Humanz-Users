@@ -32,7 +32,7 @@ const FilteredUsers = ({ applyFilters }) => {
   const [show, setShow] = useState(false);
 
   const handleChange = (e) => {
-    dispatch({ type: e.target.name, payload: e.target.value });
+    dispatch({ type: e.target?.name, payload: e.target?.value });
   };
 
   const handleApply = () => {
